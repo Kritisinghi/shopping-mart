@@ -9,6 +9,6 @@
   ],
   "scripts":{
     "client":"yarn workspace @suncomputer/frontend start",
-    "server":"yarn workspace backend start"
+    "server":"yarn workspace @suncomputer/backend start"
   }
 }
