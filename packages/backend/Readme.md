@@ -1,4 +1,4 @@
-# portfolio-app
+# @Suncomputer/Backedn
 
 ## Running the code
 Run `yarn`
