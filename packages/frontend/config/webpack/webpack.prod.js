@@ -21,6 +21,7 @@ module.exports = require("./webpack.base")({
 
     new HtmlWebpackPlugin({
       template: "src/index.html",
+      favicon: "src/assets/images/logo.png",
       minify: {
         removeComments: true,
         collapseWhitespace: true,

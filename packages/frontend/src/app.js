@@ -1,15 +1,18 @@
 import "core-js/stable";
 import "regenerator-runtime";
-
 import React from "react";
 import { render } from "react-dom";
-import "style.css";
-import "font-awesome/css/font-awesome.css";
+import { Provider } from "react-redux";
+
 import App from "pages/App";
-import {Provider} from 'react-redux'
-import store from 'redux/store'
+import store from "redux/store";
+
+import "font-awesome/css/font-awesome.css";
+import "style.css";
+
 render(
-<Provider store={store}>
+  <Provider store={store}>
     <App />
-</Provider>
-, document.getElementById("root"));
+  </Provider>,
+  document.getElementById("root")
+);

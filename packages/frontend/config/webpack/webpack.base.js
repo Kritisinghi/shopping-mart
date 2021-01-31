@@ -81,6 +81,10 @@ module.exports = (options) => ({
   },
   resolve: {
     extensions: [".js", ".jsx", ".json", ".css"],
-    modules: [path.resolve(process.cwd(), "../../node_modules"),path.resolve(process.cwd(), "node_modules") ,path.resolve(process.cwd(), "src")],
+    modules: [
+      path.resolve(process.cwd(), "../../node_modules"),
+      path.resolve(process.cwd(), "node_modules"),
+      path.resolve(process.cwd(), "src"),
+    ],
   },
 });

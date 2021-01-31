@@ -23,7 +23,7 @@ module.exports = require("./webpack.base")({
     new HtmlWebpackPlugin({
       inject: true,
       template: "src/index.html",
-      // favicon: "src/assets/images/logo.png",
+      favicon: "src/assets/images/logo.png",
     }),
   ],
 

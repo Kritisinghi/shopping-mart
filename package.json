@@ -1,14 +1,22 @@
 {
-  "private":true,
-  "name":"Suncomputer",
-  "engines":{
-    "node":"10.17.0"
+  "private": true,
+  "name": "Suncomputer",
+  "engines": {
+    "node": "10.17.0"
   },
-  "workspaces":[
+  "workspaces": [
     "packages/*"
   ],
-  "scripts":{
-    "client":"yarn workspace @suncomputer/frontend start",
-    "server":"yarn workspace @suncomputer/backend start"
+  "scripts": {
+    "client": "yarn workspace @suncomputer/frontend start",
+    "server": "yarn workspace @suncomputer/backend start",
+    "prettier": "prettier --ignore-path .gitignore \"**/*.+(js|jsx|json|css)\"",
+    "format:frontend": "yarn workspace @suncomputer/frontend format:lint",
+    "format:backend": "yarn workspace @suncomputer/backend format:lint"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "yarn format:frontend && yarn format:backend"
+    }
   }
 }

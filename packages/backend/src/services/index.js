@@ -1,3 +1,3 @@
-module.exports={
-    productService:require('./Product')
-}
+module.exports = {
+  productService: require('./Product'),
+};
