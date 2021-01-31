@@ -2,12 +2,12 @@
   "name": "@suncomputer/frontend",
   "version": "1.0.0",
   "main": "index.js",
-  "proxy": "http://127.0.0.1:5000",
   "scripts": {
     "format": "prettier --write \"*(src|config)/**/*.{js,jsx,css,json,html}\"",
     "format:check": "prettier --list-different \"*(src|config)/**/*.{js,jsx,css,json,html}\"",
     "eslint": "eslint \"*(src|config)/**/*.{js,jsx}\"",
     "start": "NODE_ENV=dev webpack-dev-server --config config/webpack/webpack.dev.js --color --progress --hide-modules --display-optimization-bailout --hot --inline",
+    "build": "rimraf dist && NODE_ENV=production webpack --config config/webpack/webpack.prod.js --mode production",
     "test": "jest"
   },
   "author": "",
@@ -21,6 +21,7 @@
     "font-awesome": "4.7",
     "node-sass": "^4.14.1",
     "react": "^16.13.1",
+    "react-app-polyfill": "^2.0.0",
     "react-dom": "^16.13.1",
     "react-redux": "^7.2.2",
     "react-router": "^5.2.0",

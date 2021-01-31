@@ -11,7 +11,7 @@ const ProductScreen = ({match,history}) => {
     if(details && match.params.id!==details._id){
       dispatch(getProductDetails(match.params.id))
     }
-  })
+  },[dispatch])
   const addItem=()=>{
     dispatch(addToCart(details._id,qty))
   }

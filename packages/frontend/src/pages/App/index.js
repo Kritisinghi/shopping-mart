@@ -21,7 +21,7 @@ const App = () => {
       <Router>
         <Navbar click={()=>setSideToggle(true)} qty={cartItems.length}/>
         <Backdrop show={sideToggle} click={()=>setSideToggle(false)} />
-        <SideDrawer show={sideToggle} />
+        <SideDrawer show={sideToggle} qty={cartItems.length}/>
         <main>
           <Switch>
             <Route exact path="/" component={Home} />

@@ -2,7 +2,7 @@ import React from 'react';
 import {Link} from 'react-router-dom'
 import './style.css';
 
-const SideDrawer=({show})=>{
+const SideDrawer=({show,qty})=>{
     const sideDrawerClass=["sideDrawer"]
     if(show){   
         sideDrawerClass.push("show")
@@ -17,7 +17,7 @@ const SideDrawer=({show})=>{
             
             <i className="fa fa-shopping-bag"></i>
             <span className="sideDrawer-text">Cart</span>
-            <span className="sideDrawer-badge">0</span>
+            <span className="sideDrawer-badge">{qty}</span>
             
           </Link>
         </li>

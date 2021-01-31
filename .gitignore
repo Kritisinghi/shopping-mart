@@ -5,3 +5,5 @@ yarn-error.log*
 /dist
 .env
 /packages/*/node_modules
+data/
+packages/*/dist

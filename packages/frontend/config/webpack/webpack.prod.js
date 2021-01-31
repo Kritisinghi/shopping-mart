@@ -36,19 +36,6 @@ module.exports = require("./webpack.base")({
       inject: true,
     }),
 
-    new OfflinePlugin({
-      relativePaths: false,
-      publicPath: "/",
-      appShell: "/",
-
-      excludes: [".htaccess"],
-      caches: {
-        main: [":rest:"],
-        additional: ["assets/**/*.chunk.js"],
-      },
-      safeToUseOptionalCaches: true,
-    }),
-
     new HashedModuleIdsPlugin({
       hashFunction: "sha256",
       hashDigest: "hex",
@@ -67,6 +54,18 @@ module.exports = require("./webpack.base")({
         test: /\.css$/,
         include: /node_modules/,
         use: [MiniCssExtractPlugin.loader, "css-loader"],
+      },
+      {
+        test: /\.(woff(2)?|ttf|eot|svg)(\?v=\d+\.\d+\.\d+)?$/,
+        use: [
+          {
+            loader: "file-loader",
+            options: {
+              name: "[name].[ext]",
+              outputPath: "/assets/css/",
+            },
+          },
+        ],
       },
     ],
   },
