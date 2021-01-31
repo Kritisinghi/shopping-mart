@@ -19,8 +19,15 @@ const Cart = () => {
       </div>
       <div className="cart-right">
         <div className="cart-info">
-          <p> Subtotal {cartItems.length} items</p>
-          <p> $ {cartItems.reduce((acc, item) => acc + item.price, 0)}</p>
+          <div className="cart-info-price-header">
+          Price Details ({cartItems.length} Items)
+          </div>
+          <div className="cart-info-summary">
+             <div className="cart-price-row"><span>Total MRP</span><span>$ {cartItems.reduce((acc, item) => acc + item.price, 0)}</span></div> 
+             <div className="cart-price-row"><span>Discount on MRP</span><span>$ 0</span></div> 
+             <div className="cart-price-total-row"><span>Total Amount</span><span>$ {cartItems.reduce((acc, item) => acc + item.price, 0)}</span></div>              
+          </div>
+          <p> </p>
         </div>
         <div className="cart-check-btn">
           <button>Proceed to Checkout</button>
