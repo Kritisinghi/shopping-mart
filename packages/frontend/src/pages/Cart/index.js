@@ -1,4 +1,4 @@
-import React,{useEffect, useState} from "react";
+import React, { useEffect, useState } from "react";
 import { useSelector } from "react-redux";
 
 import CartItem from "components/CartItem";
@@ -6,10 +6,12 @@ import "./style.css";
 
 const Cart = () => {
   const { cartItems } = useSelector((state) => state.cart);
-  const [price,setPrice]=useState(0)
-  useEffect(()=>{
-    setPrice(cartItems.map((item)=>item.price*item.quantity).reduce((acc, item) => acc + item, 0));
-  },[cartItems])
+  const [price, setPrice] = useState(0);
+  useEffect(() => {
+    setPrice(
+      cartItems.map((item) => item.price * item.quantity).reduce((acc, item) => acc + item, 0)
+    );
+  }, [cartItems]);
   return (
     <div className="cart">
       <div className="cart-left">
@@ -34,7 +36,7 @@ const Cart = () => {
             </div>
             <div className="cart-price-total-row">
               <span>Total Amount</span>
-              <span>$ {cartItems.reduce((acc, item) => acc + item.price, 0)}</span>
+              <span>$ {price}</span>
             </div>
           </div>
           <p> </p>
