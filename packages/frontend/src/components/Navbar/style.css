@@ -12,11 +12,11 @@
   font-size: 1.4rem;
   cursor: pointer;
 }
-.navbar-img{
+.navbar-img {
   object-fit: contain;
-  height:55px;
+  height: 55px;
   width: 55px;
-  background-color:white;
+  background-color: white;
 }
 .navbar-links {
   display: flex;

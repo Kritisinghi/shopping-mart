@@ -1,6 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import logo from 'assets/images/logo.png'
+import logo from "assets/images/logo.png";
 
 import "./style.css";
 
@@ -9,7 +9,7 @@ const Navbar = ({ click, qty }) => {
     <nav className="navbar">
       <div className="navbar-logo">
         <a className="navbar-item" href="/">
-          <img className="navbar-img" src={logo} alt="suncomputer"/>
+          <img className="navbar-img" src={logo} alt="suncomputer" />
         </a>
       </div>
       <ul className="navbar-links">
