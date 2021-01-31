@@ -1,0 +1,9 @@
+build:
+  docker:
+    api: Dockefile
+  config:
+    NODE_ENV: production
+    PORT: 80
+    MONGO_URI: mongodb+srv://suncompter-user:DOlaxStnRCwTS3Xa@suncomputer.zlzvv.mongodb.net/suncompter?retryWrites=true&w=majority   
+run:
+  api: npm start

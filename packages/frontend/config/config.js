@@ -1,3 +1,3 @@
 export default{
-    apiBaseUrl: "http://localhost:5000"
+    apiBaseUrl: "https://suncomputer-api.herokuapp.com"
 }

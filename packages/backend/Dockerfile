@@ -6,7 +6,7 @@ COPY . .
 
 RUN yarn global add nodemon
 
-EXPOSE 5000
+EXPOSE 80
 CMD ["node","dbInitializer.js"]
 CMD ["yarn","start"]
 
