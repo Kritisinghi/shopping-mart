@@ -6,19 +6,18 @@ import "./style.css";
 const ProductCard = ({ id, data }) => {
   return (
     <div className="product">
-      <img src={data.imageUrl} alt={data.name} />
-      <div className="product-info">
-        <p className="product-name">{data.name}</p>
-        <p className="product-description">
-          {data.description.length > 200
-            ? data.description.substring(0, 200) + "..."
-            : data.description}
-        </p>
-        <p className="product-price">${data.price}</p>
-        <Link to={`/product/${id}`} className="product-view-btn">
-          View
-        </Link>
-      </div>
+      <Link to={`/product/${id}`} className="product-view-btn">
+        <img src={data.imageUrl} alt={data.name} />
+        <div className="product-info">
+          <h3 className="product-name">{data.name}</h3>
+          <h4 className="product-description">
+            {data.description.length > 200
+              ? data.description.substring(0, 200) + "..."
+              : data.description}
+          </h4>
+          <div className="product-price">$ {data.price}</div>
+        </div>
+      </Link>
     </div>
   );
 };

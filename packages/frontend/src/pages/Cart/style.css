@@ -4,6 +4,7 @@
   margin: 1.2rem 5vw;
 }
 .cart h2 {
+  margin-top: 0.5rem;
   margin-bottom: 1rem;
   font-size: 2rem;
 }
@@ -14,6 +15,7 @@
   padding: 1rem;
 }
 .cart-right {
+  margin-top: 1rem;
   flex: 0.28;
   background: #fff;
   box-shadow: 0 1px 4px rgba(0, 0, 0, 0.4);

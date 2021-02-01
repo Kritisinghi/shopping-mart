@@ -16,18 +16,22 @@ const Home = () => {
 
   return (
     <div className="home">
-      <h2 className="home-title">Products</h2>
-      <div className="home-products">
-        {loading ? (
-          <LoadingOverlay></LoadingOverlay>
-        ) : error ? (
-          <h2>{error}</h2>
-        ) : (
-          products.map((item) => <ProductCard id={item._id} data={item} key={item._id} />)
-        )}
-      </div>
+      {loading ? (
+        <LoadingOverlay></LoadingOverlay>
+      ) : error ? (
+        <h2>{error}</h2>
+      ) : (
+        <>
+          <h2 className="home-title">Products</h2>
+          <div className="row-base"></div>
+          <section className="home-products">
+            {products.map((item) => (
+              <ProductCard id={item._id} data={item} key={item._id} />
+            ))}
+          </section>
+        </>
+      )}
     </div>
   );
 };
-
 export default Home;
