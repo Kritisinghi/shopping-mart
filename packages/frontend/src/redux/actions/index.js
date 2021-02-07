@@ -69,3 +69,28 @@ export const getProductDetails = (id) => async (dispatch) => {
     });
   }
 };
+
+export const googleLogin= (id) => async(dispatch)=>{
+  try{
+    dispatch({
+      type: actionTypes.GOOGLE_LOGIN_REQUEST,
+    })
+    const { data } = await axios({
+      method:"POST",
+      url: `${config.apiBaseUrl}/api/v1/login`,
+      data:{token:id}
+    });
+    
+    dispatch({
+      type: actionTypes.GOOGLE_LOGIN_SUCCESS,
+      payload: data
+    });
+  }
+  catch(error){
+    dispatch({
+      type: actionTypes.GOOGLE_LOGIN_FAILURE,
+      payload:
+        error.response && error.response.data.message ? error.response.data.message : error.message,
+    });
+  }
+}

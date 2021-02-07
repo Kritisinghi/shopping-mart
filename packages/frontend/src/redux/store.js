@@ -5,11 +5,12 @@ import thunk from "redux-thunk";
 import { cartReducer } from "./reducers/cartReducer";
 import { productReducer } from "./reducers/productReducer";
 import { productDetailReducer } from "./reducers/productDetailReducer";
-
+import { loginReducer} from './reducers/loginReducer'
 const reducer = combineReducers({
   cart: cartReducer,
   product: productReducer,
   productDetails: productDetailReducer,
+  login: loginReducer
 });
 
 const store = createStore(
